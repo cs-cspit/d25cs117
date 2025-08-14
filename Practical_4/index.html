@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical 4: Dynamic Content</title>
+    <link rel="stylesheet" href="style.css"> <!-- Linking external CSS file -->
+</head>
+<body>
+
+    <!-- Heading for FAQ Section -->
+    <h2>Collapsible FAQ</h2>
+    <h1>GATE Q&A - HTML, CSS, JavaScript</h1>
+
+    <!-- ================= HTML Questions ================= -->
+    
+    <!-- FAQ 1 -->
+    <div class="faq">
+        <!-- Question -->
+        <div class="faq-question">HTML Q1: Which HTML tag is used to create a hyperlink?</div>
+        <!-- Answer -->
+        <div class="faq-answer">Answer: &lt;a&gt; tag (Anchor tag). Example: &lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;</div>
+    </div>
+
+    <!-- FAQ 2 -->
+    <div class="faq">
+        <div class="faq-question">HTML Q2: In HTML5, which element represents self-contained content with a heading?</div>
+        <div class="faq-answer">Answer: &lt;article&gt; element.</div>
+    </div>
+
+    <!-- FAQ 3 (MCQ) -->
+    <div class="faq">
+        <div class="faq-question">HTML Q3 (MCQ): Which attribute specifies an alternate text for an image?</div>
+        <div class="faq-answer">Answer: B) alt</div>
+    </div>
+
+    <!-- ================= CSS Questions ================= -->
+    
+    <!-- FAQ 4 -->
+    <div class="faq">
+        <div class="faq-question">CSS Q4: Which CSS property changes the text color of an element?</div>
+        <div class="faq-answer">Answer: color property. Example: p { color: red; }</div>
+    </div>
+
+    <!-- FAQ 5 -->
+    <div class="faq">
+        <div class="faq-question">CSS Q5: Difference between relative and absolute positioning?</div>
+        <div class="faq-answer">Relative → positioned from its normal position. Absolute → positioned relative to the nearest positioned ancestor.</div>
+    </div>
+
+    <!-- FAQ 6 (MCQ) -->
+    <div class="faq">
+        <div class="faq-question">CSS Q6 (MCQ): Which property controls space between border and content?</div>
+        <div class="faq-answer">Answer: B padding</div>
+    </div>
+
+    <!-- ================= JavaScript Questions ================= -->
+    
+    <!-- FAQ 7 -->
+    <div class="faq">
+        <div class="faq-question">JS Q7: Output of console.log(2 + "2")?</div>
+        <div class="faq-answer">Answer: "22" (string concatenation).</div>
+    </div>
+
+    <!-- FAQ 8 -->
+    <div class="faq">
+        <div class="faq-question">JS Q8: Difference between == and === in JavaScript?</div>
+        <div class="faq-answer">== compares values after type conversion. === compares values without type conversion.</div>
+    </div>
+
+    <!-- FAQ 9 (MCQ) -->
+    <div class="faq">
+        <div class="faq-question">JS Q9 (MCQ): Which of the following is NOT a JS data type? A) Number B) Boolean C) Character D) String</div>
+        <div class="faq-answer">Answer: C) Character</div>
+    </div>
+
+
+    <!-- ================= Popup Section ================= -->
+    
+    <!-- Button to open popup -->
+    <button id="popupBtn">Show Popup</button>
+    
+    <!-- Overlay background for popup -->
+    <div class="popup-overlay" id="overlay"></div>
+    
+    <!-- Popup message container -->
+    <div class="popup" id="popup">
+        <p>This is the Popup Message!</p>
+        <!-- Button to close popup -->
+        <button id="closePopup">Close</button>
+    </div>
+
+    <!-- ================= Image Slider Section ================= -->
+    
+    <h2>Image Slider</h2>
+    <div class="slider">
+        <!-- Slides container -->
+        <div class="slides" id="slides">
+            <img src="1.png" alt="Image 1">
+            <img src="2.png" alt="Image 2">
+            <img src="3.png" alt="Image 3">
+            <img src="1.png" alt="Image 1">
+            <img src="2.png" alt="Image 2">
+            <img src="3.png" alt="Image 3">
+        </div>
+    </div>
+
+    <!-- Linking JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

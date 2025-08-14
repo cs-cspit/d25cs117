@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Registration Form</title>
+  <style>
+    body {
+      background-color: lightblue;
+      font-family: Arial, sans-serif;
+    }
+
+    form {
+      width: 400px;
+      margin: 50px auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="number"] {
+      width: 100%;
+      padding: 5px;
+      margin-top: 5px;
+    }
+
+    input[type="radio"] {
+      margin-left: 10px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      margin-top: 15px;
+      padding: 8px 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="Login.html" method="get">
+    <h3>Student Registration</h3>
+
+    <label>Name</label>
+    <input type="text" name="name" required>
+
+    <label>Father's Name</label>
+    <input type="text" name="fathername" required>
+
+    <label>Mother's Name</label>
+    <input type="text" name="mothername" required>
+
+    <label>Date of Birth</label>
+    <input type="date" name="dob" required>
+
+    <label>Gender</label>
+    <input type="radio" name="gender" value="Male" required> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <input type="radio" name="gender" value="Other"> Other
+
+    <label>Roll No</label>
+    <input type="text" name="rollno" required>
+
+    <label>Semester</label>
+    <input type="number" name="semester" required>
+
+    <label>Division</label>
+    <input type="text" name="division" required>
+
+    <label>Branch</label>
+    <input type="text" name="branch" required>
+
+    <br><br>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+  </form>
+
+</body>
+</html>

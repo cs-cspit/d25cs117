@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: lightblue;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      color: darkblue;
+      margin-bottom: 20px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 500px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    td {
+      padding: 10px;
+      border: 1px solid #444;
+    }
+
+    .profile-img {
+      height: 100px;
+      width: 80px;
+      display: block;
+      margin-left: 50px;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: navy;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .back-button:hover {
+      background-color: darkred;
+    }
+
+    @media (max-width: 600px) {
+      .profile-img {
+        margin-left: 0;
+      }
+
+      table {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Profile Page</h2>
+    
+    <table>
+      <tr>
+        <td>Photo :</td>
+        <td><img src="Photo.jpg" alt="Profile Photo" class="profile-img" /></td>
+      </tr>
+      <tr>
+        <td>ID :</td>
+        <td>d25cs117</td>
+      </tr>
+      <tr>
+        <td>Name :</td>
+        <td>Jayraj V Panchal</td>
+      </tr>
+      <tr>
+        <td>Department :</td>
+        <td>Computer Science Engg</td>
+      </tr>
+      <tr>
+        <td>Contact No :</td>
+        <td>8160664556</td>
+      </tr>
+      <tr>
+        <td>Email Id :</td>
+        <td>Jayrajpanchalv@gmail.com</td>
+      </tr>
+    </table>
+
+    <a href="Home.html" class="back-button">Back</a>
+  </div>
+</body>
+</html>

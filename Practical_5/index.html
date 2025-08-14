@@ -1,0 +1,106 @@
+<html>
+<head>
+    <title>Pagination Practical</title>
+    <style>
+        /* Base page styling */
+        body {
+            background-color: black; /* Dark background */
+            text-align: center; /* Center content horizontally */
+            padding: 20px; /* Spacing around content */
+            margin: 0; /* Remove default body margin */
+            font-family: Arial, sans-serif; /* Clean font */
+        }
+
+        /* Buttons styling */
+        button {
+            background-color: aliceblue; /* Light background */
+            color: black; /* Text color */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded edges */
+            cursor: pointer; /* Pointer on hover */
+            font-weight: bold; /* Bold text */
+            padding: 10px 20px; /* Space inside button */
+            margin: 10px; /* Space around button */
+            font-size: 1rem; /* Default text size */
+        }
+
+        /* Disabled buttons */
+        button:disabled {
+            background-color: gray; /* Grayed out */
+            cursor: not-allowed; /* Show disabled cursor */
+        }
+
+        /* Image styling */
+        img {
+            max-width: 90%; /* Image scales within screen width */
+            height: auto; /* Keep aspect ratio */
+            border: 5px solid rgb(207, 12, 12); /* White border */
+            border-radius: 10px; /* Rounded corners */
+            margin: 20px 0; /* Space above and below */
+        }
+
+        /* Responsive adjustments for small screens */
+        @media (max-width: 600px) {
+            button {
+                width: 80px; /* Smaller buttons on mobile */
+                font-size: 0.9rem; /* Smaller text */
+                padding: 8px 15px; /* Adjust padding */
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Previous image button -->
+    <button id="previous">Prev</button>
+    
+    <!-- Image display (changes according to the page number) -->
+    <img src="1.jpg" alt="Page Image" id="pageImage">
+
+    <!-- Next image button -->      
+    <button id="next">Next</button>
+
+    <script>
+        // Track the current page number (starting from 1)
+        let currentPage = 1;
+
+        // Total number of pages (images)
+        const totalPages = 5;
+
+        // Array containing image file names
+        const images = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"];
+
+        // Get references to HTML elements
+        const prevB = document.getElementById("previous");
+        const nextB = document.getElementById("next");
+        const pageImg = document.getElementById("pageImage");
+
+        // Function to update the displayed image and button states
+        function updatePagination() {
+            pageImg.src = images[currentPage - 1]; // Display image for current page
+            prevB.disabled = currentPage === 1; // Disable "Prev" if on first image
+            nextB.disabled = currentPage === totalPages; // Disable "Next" if on last image
+        }
+
+        // When "Prev" button is clicked
+        prevB.addEventListener("click", () => {
+            if (currentPage > 1) { 
+                currentPage--; // Go to previous image
+                updatePagination(); // Update image and button states
+            }
+        });
+
+        // When "Next" button is clicked
+        nextB.addEventListener("click", () => {
+            if (currentPage < totalPages) {
+                currentPage++; // Go to next image
+                updatePagination(); // Update image and button states
+            }
+        });
+
+        // Initialize first display when page loads
+        updatePagination();
+    </script>
+
+</body>
+</html>

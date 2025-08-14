@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Registration Form</title>
+  <style>
+    body {
+      background: #e3f0ff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .reg-form {
+      width: 420px;
+      margin: 40px auto 0 auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.13);
+      padding: 28px 30px 22px 30px;
+    }
+    .reg-form h3 {
+      text-align: center;
+      color: #2a3a6a;
+      margin-bottom: 18px;
+    }
+    label {
+      display: block;
+      margin-top: 13px;
+      color: #2a3a6a;
+      font-weight: 500;
+    }
+    input[type="text"],
+    input[type="date"],
+    input[type="number"] {
+      width: 100%;
+      padding: 7px 8px;
+      margin-top: 6px;
+      border: 1px solid #b0c4de;
+      border-radius: 5px;
+      font-size: 1rem;
+      background: #f7fbff;
+    }
+    input[type="radio"] {
+      margin-left: 10px;
+      margin-right: 3px;
+    }
+    .form-actions {
+      text-align: center;
+      margin-top: 22px;
+    }
+    input[type="submit"],
+    input[type="reset"] {
+      padding: 8px 22px;
+      border: none;
+      border-radius: 5px;
+      background: #2a3a6a;
+      color: #fff;
+      font-size: 1rem;
+      margin: 0 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background: #4666b0;
+    }
+  </style>
+</head>
+<body>
+
+  <form class="reg-form" action="Login.html" method="get">
+    <h3>Student Registration</h3>
+
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name">
+
+    <label for="fathername">Father's Name</label>
+    <input type="text" id="fathername" name="fathername">
+
+    <label for="mothername">Mother's Name</label>
+    <input type="text" id="mothername" name="mothername">
+
+    <label for="dob">Date of Birth</label>
+    <input type="date" id="dob" name="dob">
+
+    <label>Gender</label>
+    <input type="radio" id="male" name="gender" value="Male"> <label for="male" style="display:inline; font-weight:400;">Male</label>
+    <input type="radio" id="female" name="gender" value="Female"> <label for="female" style="display:inline; font-weight:400;">Female</label>
+    <input type="radio" id="other" name="gender" value="Other"> <label for="other" style="display:inline; font-weight:400;">Other</label>
+
+    <label for="rollno">Roll No</label>
+    <input type="text" id="rollno" name="rollno">
+
+    <label for="semester">Semester</label>
+    <input type="number" id="semester" name="semester">
+
+    <label for="division">Division</label>
+    <input type="text" id="division" name="division">
+
+    <label for="branch">Branch</label>
+    <input type="text" id="branch" name="branch">
+
+    <div class="form-actions">
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </div>
+  </form>
+
+</body>
+</html>
