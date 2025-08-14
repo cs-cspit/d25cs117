@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 3 : Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background: white;
+            padding: 20px 25px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .gender-options {
+            margin-bottom: 12px;
+        }
+
+        button {
+            width: 100%;
+            background: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="return FormValidation()">
+        <h2>Registration Form</h2>
+
+        <label for="name">Name :</label>
+        <input type="text" id="name">
+
+        <label for="enrollno">Enroll ID :</label>
+        <input type="text" id="enrollno">
+
+        <label>Gender :</label>
+        <div class="gender-options">
+            <label><input type="radio" name="gender" value="male"> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            <label><input type="radio" name="gender" value="other"> Other</label>
+        </div>
+
+        <label for="email">Email :</label>
+        <input type="text" id="email">
+
+        <label for="password">Password :</label>
+        <input type="password" id="password">
+
+        <label for="confirm_password">Confirm Password :</label>
+        <input type="password" id="confirm_password">
+
+        <button type="submit">Registration Submit</button>
+    </form>
+
+    <script>
+        function FormValidation(){
+            const name = document.getElementById("name").value.trim();
+            const enrollno = document.getElementById("enrollno").value.trim();
+            const gender = document.querySelector('input[name="gender"]:checked');
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value;
+            const confirm_password = document.getElementById("confirm_password").value;
+
+            if(name === ""){
+                alert("Please enter your name.");
+                return false;
+            }
+            if(enrollno === "" || isNaN(enrollno)){
+                alert("Please enter a valid enrollment number.");
+                return false;
+            }
+            if(!gender){
+                alert("Please select your gender.");
+                return false;
+            }
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(!emailPattern.test(email)){
+                alert("Please enter a valid email address.");
+                return false;
+            }
+            if(password.length < 6){
+                alert("Password must be at least 6 characters long.");
+                return false;
+            }
+            if(password !== confirm_password){
+                alert("Passwords do not match.");
+                return false;
+            }
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</body>
+</html>
