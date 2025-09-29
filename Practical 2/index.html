@@ -4,79 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Portal</title>
+
     <style type="text/css">
-        *{
-            text-decoration: none;
-        }
-        .nav{
-            background:transparent; font-family: calibri; padding-right: 15px; padding-left: 15px;;
-        }
-        .navdiv{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        li{
-            list-style: none;
-            display: inline-block;
-        }
-        li a{
-            color: white;
-            padding: 10px 15px;
-            font-size: 18px;
-        }
-        button a{
-            color: white;
-            padding: 10px 15px;
-            font-size: 18px;
-        }
-        button{
-            background: transparent;
-            border: none;
-            cursor: pointer;
-        }
-        .body{
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed; 
-            background-color: rgb(6, 236, 209);
-        }
-        .body img{
-            width: 100%;
-            size: cover;
-        }
-        .footer{
-          background:crimson;
-          font-family: calibri; 
-          padding-right: 15px; 
-          padding-left: 15px;
-          text-align: center;
-          color: white;
-            
-        }
+        body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff; /* fallback */
+    color: #003366; /* Dark blue text */
+    background-image: url('charusat.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+.nav {
+    width: 100%;
+    height: 80px;
+    background-color: #003366; /* Dark blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navdiv ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.navdiv ul li {
+    margin: 0 20px;
+}
+.navdiv ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: transparent;
+}
+.navdiv ul li a:hover,
+.navdiv ul li a:focus {
+    background-color: #1976d2; /* Accent blue */
+    color: #fff;
+}
+img {
+    display: block;
+    margin: 50px auto 30px auto;
+    width: 300px;
+    max-width: 90vw;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(25, 118, 210, 0.1);
+    background: #fff;
+}
+.footer {
+    width: 100%;
+    height: 60px;
+    background-color: #003366;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 18px;
+    letter-spacing: 1px;
+    z-index: 100;
+}
+
+/* Responsive Styles */
+@media (max-width: 700px) {
+    .nav {
+        height: auto;
+        padding: 10px 0;
+    }
+    .navdiv ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navdiv ul li {
+        margin: 10px 0;
+    }
+    img {
+        width: 90vw;
+        margin: 30px auto 80px auto;
+    }
+    .footer {
+        font-size: 15px;
+        height: 50px;
+    }
+}
+@media (max-width: 400px) {
+    .navdiv ul li a {
+        font-size: 16px;
+        padding: 8px 10px;
+    }
+    .footer {
+        font-size: 13px;
+        height: 40px;
+    }
+}
     </style>
 </head>
 <body class="body">
-    
-        <nav class="nav">
-
-            <div class="navdiv">
-
-                <ul>
-                    <li><a href="Home.html" >Home Page</a></li>
-                    <li><a href="Profile.html" >Profile Page</a></li>
-                   <li><a href="Course.html" >Course Information</a></li>
-                   <li><a href="Registration.html">Registration</a></li>
-               </ul>
-            </div>
-        </nav>
-
-        <img src="charusat.png">
-
+    <nav class="nav">
+        <div class="navdiv">
+            <ul>
+                <li><a href="index.html" >Home Page</a></li>
+                <li><a href="Profile.html" >Profile Page</a></li>
+                <li><a href="Course.html" >Course Information</a></li>
+                <li><a href="Result.html">Result</a></li>
+                <li><a href="TimeTable.html">Timetable</a></li>
+                <li><a href="fees.html">Fees</a></li>
+                <li><a href="inquiry.html">Inquriy</a></li>
+                <li><a href="Notic.html">Notices</a></li>            
+            </ul>
+        </div>
+    </nav>
 </body>
 <footer>
     <div class="footer">
-        <p>www.charusat.com</p>
+        <p>
+            CHARUSAT University, Changa, Gujarat, India | 
+            Phone: +91-2697-265011 | 
+            Email: info@charusat.ac.in | 
+            Website: <a href="https://www.charusat.ac.in" style="color:#fff; text-decoration:underline;">www.charusat.ac.in</a>
+        </p>
     </div>
 </footer>
 </html>

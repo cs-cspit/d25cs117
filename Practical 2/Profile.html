@@ -4,75 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Profile Page</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: lightblue;
-      font-family: Arial, sans-serif;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 40px 20px;
-    }
-
-    h2 {
-      color: darkblue;
-      margin-bottom: 20px;
-    }
-
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      max-width: 500px;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    td {
-      padding: 10px;
-      border: 1px solid #444;
-    }
-
-    .profile-img {
-      height: 100px;
-      width: 80px;
-      display: block;
-      margin-left: 50px;
-    }
-
-    .back-button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: navy;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    .back-button:hover {
-      background-color: darkred;
-    }
-
-    @media (max-width: 600px) {
-      .profile-img {
-        margin-left: 0;
-      }
-
-      table {
-        font-size: 14px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <nav class="nav">
+    <div class="navdiv">
+      <ul>
+        <li><a href="index.html" >Home Page</a></li>
+        <li><a href="Profile.html" >Profile Page</a></li>
+        <li><a href="Course.html" >Course Information</a></li>
+        <li><a href="Result.html">Result</a></li>
+        <li><a href="TimeTable.html">Timetable</a></li>
+        <li><a href="fees.html">Fees</a></li>
+        <li><a href="inquiry.html">Inquriy</a></li>
+        <li><a href="Notic.html">Notices</a></li>            
+      </ul>
+    </div>
+  </nav>
   <div class="container">
     <h2>Profile Page</h2>
-    
     <table>
       <tr>
         <td>Photo :</td>
@@ -99,8 +49,17 @@
         <td>Jayrajpanchalv@gmail.com</td>
       </tr>
     </table>
-
     <a href="Home.html" class="back-button">Back</a>
   </div>
+  <footer>
+    <div class="footer">
+      <p>
+        CHARUSAT University, Changa, Gujarat, India |
+        Phone: +91-2697-265011 |
+        Email: info@charusat.ac.in |
+        Website: <a href="https://www.charusat.ac.in">www.charusat.ac.in</a>
+      </p>
+    </div>
+  </footer>
 </body>
 </html>

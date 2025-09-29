@@ -2,77 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Course Information</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: palegoldenrod;
-      font-family: Arial, sans-serif;
-    }
-
-    header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: darkslateblue;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
-
-    section {
-      background-color: white;
-      border-radius: 8px;
-      padding: 15px;
-      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
-    }
-
-    h2 {
-      color: darkslateblue;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    /* Media Query for Small Devices */
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        padding: 15px;
-      }
-
-      h1 {
-        font-size: 1.5rem;
-      }
-
-      .container {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Computer Science Engineering (CSE) - Subjects Overview</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <header>
-    <h1>Computer Science Engineering (CSE) - Subjects Overview</h1>
-  </header>
-
+  <nav class="nav">
+    <div class="navdiv">
+      <ul>
+          <li><a href="index.html" >Home Page</a></li>
+          <li><a href="Profile.html" >Profile Page</a></li>
+          <li><a href="Course.html" >Course Information</a></li>
+          <li><a href="Result.html">Result</a></li>
+          <li><a href="TimeTable.html">Timetable</a></li>
+          <li><a href="fees.html">Fees</a></li>
+          <li><a href="inquiry.html">Inquriy</a></li>
+          <li><a href="Notic.html">Notices</a></li>            
+      </ul>
+    </div>
+  </nav>
   <div class="container">
+    <header>
+      <h1>Computer Science Engineering (CSE) - Subjects Overview</h1>
+    </header>
     <section>
       <h2>🧠 Core Concepts of CSE</h2>
       <ul>
@@ -88,7 +40,6 @@
         <li><strong>Web Technologies</strong>: HTML, CSS, JS</li>
       </ul>
     </section>
-
     <section>
       <h2>🎓 Elective Subjects</h2>
       <ul>
@@ -99,7 +50,6 @@
         <li><strong>Mobile App Dev</strong>: Android, Flutter</li>
       </ul>
     </section>
-
     <section>
       <h2>🧪 Lab Work & Projects</h2>
       <ul>
@@ -109,7 +59,6 @@
         <li>Real-World Applications</li>
       </ul>
     </section>
-
     <section>
       <h2>📘 Mathematics for CSE</h2>
       <ul>
@@ -119,7 +68,6 @@
         <li>Calculus, Numerical Methods</li>
       </ul>
     </section>
-
     <section>
       <h2>🛠️ Tools & Technologies</h2>
       <ul>
@@ -131,5 +79,15 @@
       </ul>
     </section>
   </div>
+  <footer>
+    <div class="footer">
+      <p>
+        CHARUSAT University, Changa, Gujarat, India |
+        Phone: +91-2697-265011 |
+        Email: info@charusat.ac.in |
+        Website: <a href="https://www.charusat.ac.in">www.charusat.ac.in</a>
+      </p>
+    </div>
+  </footer>
 </body>
 </html>
