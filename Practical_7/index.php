@@ -20,10 +20,9 @@
 <body>
     <form action="" method="POST">
         <h2>Login Page</h2>
-        Username : <input type="text" name="uname">
-        Password : <input type="password" name="pwd">
+        Username : <input type="text" name="uname" required>
+        Password : <input type="password" name="pwd" required>
         <input type="submit" value="submit">
-
     </form>
 </body>
 </html>
@@ -32,9 +31,16 @@
     if(!empty($_POST["uname"]) && !empty($_POST["pwd"])){
         $uname = $_POST["uname"];
         $pwd = $_POST["pwd"];
+
         session_start();
         $_SESSION["uname"] = $uname;
         $_SESSION["pwd"] = $pwd;
+
+        // ---- Setting cookies ----
+        // cookies will expire in 1 hour (3600 seconds)
+        setcookie("uname", $uname, time() + 3600, "/");
+        setcookie("pwd", $pwd, time() + 3600, "/");
+
         header("Location: confirm.php");
         exit();
     }
